@@ -1,0 +1,15 @@
+{
+    "cSpell.language": "en,de",
+    "cSpell.words": [
+        "Inklusionshinweis"
+    ],
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/build/",
+        "%TMPFILE%",
+        "-y=defaultIndent: '%INDENT%'"
+    ],
+    "editor.formatOnSave": true,
+}

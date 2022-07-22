@@ -1,0 +1,22 @@
+variables:
+    TEX_SOURCE_DIRECTORY:
+        value: "./"
+        description: "Path to the root directory of the document."
+    TEX_SOURCE:
+        value: "document"
+        description: "The root tex file to start the build process with (no extension!)."
+    TEX_PDF_NAME:
+        value: "document"
+        description: "The resulting PDF file."
+
+.build-latex-document:
+    image: texlive/texlive
+
+    script:
+        - sh .vscode/build.sh
+
+    artifacts:
+        name: document
+        paths:
+            - $TEX_PDF_NAME.pdf
+        expire_in: never

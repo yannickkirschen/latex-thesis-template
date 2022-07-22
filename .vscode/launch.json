@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "PowerShell",
+            "request": "launch",
+            "name": "Build LaTeX project on Windows",
+            "script": "./.vscode/build.ps1",
+            "args": [],
+            "cwd": "."
+        }
+    ]
+}
