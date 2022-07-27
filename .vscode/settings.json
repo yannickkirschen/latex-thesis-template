@@ -12,4 +12,5 @@
         "-y=defaultIndent: '%INDENT%'"
     ],
     "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
 }
