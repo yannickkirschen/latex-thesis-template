@@ -19,27 +19,41 @@
     captionpos=b,               % Set the caption-position to bottom
     xleftmargin=0pt,            % Margin left
     xrightmargin=0pt,           % Margin right
-    frame=none,                % Border off
+    frame=none,                 % Border off
 }
 
-\definecolor{gray}{rgb}{0.4,0.4,0.4}
-\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
-\definecolor{cyan}{rgb}{0.0,0.6,0.6}
-\definecolor{grey}{rgb}{0.5,0.5,0.5}
-\definecolor{delim}{RGB}{20,105,176}
-\definecolor{numb}{RGB}{106, 109, 32}
-\definecolor{string}{rgb}{0.64,0.08,0.08}
+\definecolor{JavaKeyword}{HTML}{0033B3}
+\definecolor{JavaString}{HTML}{067D17}
+\definecolor{JavaAnnotation}{HTML}{9E880D}
+\definecolor{JavaComment}{HTML}{8C8C8C}
 
-\definecolor{LinkColor}{HTML}{00007A}
+\definecolor{XMLKeyword}{HTML}{0033B3}
+\definecolor{XMLString}{HTML}{067D17}
+\definecolor{XMLComment}{HTML}{8C8C8C}
+
+\definecolor{JSONString}{HTML}{067D17}
+\definecolor{JSONNumber}{HTML}{1750EB}
+\definecolor{JSONDelimiter}{HTML}{000000}
+
+\definecolor{YAMLString}{HTML}{067D17}
+\definecolor{YAMLKeyword}{HTML}{0033B3}
+\definecolor{YAMLComment}{HTML}{8C8C8C}
+
+\definecolor{PropertiesKeyword}{HTML}{083080}
+\definecolor{PropertiesString}{HTML}{067D17}
+\definecolor{PropertiesComment}{HTML}{8C8C8C}
 
 \lstdefinelanguage{Java}{
-    commentstyle=\color{grey},
+    commentstyle=\color{JavaComment},
     morestring=[b]",
-    stringstyle=\color{string},
+    stringstyle=\color{JavaString},
     morekeywords={abstract, assert, boolean, break, byte, case, catch, char, class, continue, default, do, double, else,
             enum, extends, final, finally, float, for, if, implements, import, instanceof, int, interface, long, native, new, package,
             private, protected, public, return, short, static, strictfp, super, super, switch, synchronized, this, throw, throws,
-            transient, try, var, void, volatile, while}
+            transient, try, var, void, volatile, while},
+    keywordstyle=\color{JavaKeyword},
+    moredelim=[il][\textcolor{JavaAnnotation}]{$$},
+    moredelim=[is][\textcolor{JavaAnnotation}]{\%\%}{\%\%}
 }
 
 \lstdefinelanguage{XML}{
@@ -47,50 +61,49 @@
     morestring=[s]{>}{<},
     morecomment=[s]{<!--}{-->},
     morecomment=[s]{<?}{?>},
-    stringstyle=\color{black},
-    identifierstyle=\color{darkblue},
-    keywordstyle=\color{cyan},
-    commentstyle=\color{grey},
+    stringstyle=\color{XMLString},
+    identifierstyle=\color{XMLKeyword},
+    commentstyle=\color{XMLComment},
     morekeywords={} % list your attributes here
 }
 
 \lstdefinelanguage{JSON}{
 morestring=[b]",
-stringstyle=\color{string},
+stringstyle=\color{JSONString},
 literate=
-*{0}{{{\color{numb}0}}}{1}
-{1}{{{\color{numb}1}}}{1}
-{2}{{{\color{numb}2}}}{1}
-{3}{{{\color{numb}3}}}{1}
-{4}{{{\color{numb}4}}}{1}
-{5}{{{\color{numb}5}}}{1}
-{6}{{{\color{numb}6}}}{1}
-{7}{{{\color{numb}7}}}{1}
-{8}{{{\color{numb}8}}}{1}
-{9}{{{\color{numb}9}}}{1}
-{\{}{{{\color{delim}{\{}}}}{1}
-{\}}{{{\color{delim}{\}}}}}{1}
-{[}{{{\color{delim}{[}}}}{1}
-{]}{{{\color{delim}{]}}}}{1}
+*{0}{{{\color{JSONNumber}0}}}{1}
+{1}{{{\color{JSONNumber}1}}}{1}
+{2}{{{\color{JSONNumber}2}}}{1}
+{3}{{{\color{JSONNumber}3}}}{1}
+{4}{{{\color{JSONNumber}4}}}{1}
+{5}{{{\color{JSONNumber}5}}}{1}
+{6}{{{\color{JSONNumber}6}}}{1}
+{7}{{{\color{JSONNumber}7}}}{1}
+{8}{{{\color{JSONNumber}8}}}{1}
+{9}{{{\color{JSONNumber}9}}}{1}
+{\{}{{{\color{JSONDelimiter}{\{}}}}{1}
+{\}}{{{\color{JSONDelimiter}{\}}}}}{1}
+{[}{{{\color{JSONDelimiter}{[}}}}{1}
+{]}{{{\color{JSONDelimiter}{]}}}}{1}
 }
 
 \lstdefinelanguage{YML}{
     morecomment=[l]{\#},
-    commentstyle=\color{grey},
+    commentstyle=\color{YAMLComment},
     morestring=[b]",
     morestring=[b]',
-    stringstyle=\color{darkblue},
+    stringstyle=\color{YAMLString},
     morekeywords={}, % list your attributes here
-    keywordstyle=\color{cyan},
+    keywordstyle=\color{YAMLKeyword},
 }
 
 \lstdefinelanguage{properties}{
     alsoletter={-},
     morecomment=[l]{\#},
-    commentstyle=\color{grey},
+    commentstyle=\color{PropertiesComment},
     morestring=[b]",
     morestring=[b]',
-    stringstyle=\color{cyan},
+    stringstyle=\color{PropertiesString},
     morekeywords={}, % list your attributes here
-    keywordstyle=\color{darkblue},
+    keywordstyle=\color{PropertiesKeyword},
 }
