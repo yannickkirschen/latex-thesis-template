@@ -14,6 +14,9 @@ try {
 
     Write-Output "Compile #2"
     pdflatex -output-directory build Thesis.tex
+
+    Write-Output "Compile #3"
+    pdflatex -output-directory build Thesis.tex
 }
 finally {
     Pop-Location
