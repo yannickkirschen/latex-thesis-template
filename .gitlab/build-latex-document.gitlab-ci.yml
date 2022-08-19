@@ -18,5 +18,5 @@ variables:
     artifacts:
         name: document
         paths:
-            - $TEX_PDF_NAME.pdf
+            - $TEX_SOURCE_DIRECTORY/build/$TEX_PDF_NAME.pdf
         expire_in: never
