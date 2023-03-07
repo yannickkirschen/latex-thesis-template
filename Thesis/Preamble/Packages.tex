@@ -8,21 +8,23 @@
 \usepackage[activate]{microtype}                     % Line breaks and more
 \usepackage[onehalfspacing]{setspace}                % Spacing
 \usepackage[autostyle=true, german=quotes]{csquotes} % Quotes
-\usepackage{appendix}                                % Appendix
-\usepackage{graphicx}                                % Images
-\usepackage{enumitem}                                % Lists
-\usepackage{listings}                                % Display code
-\usepackage[section]{placeins}                       % That images are not moved
-\usepackage{float}                                   %            ''
-\usepackage{tabularx}                                % Better tables
-\usepackage{longtable}                               %      ''
-\usepackage[printonlyused]{acronym}                  % Abbreviations; option footnote: display long version in footnote
-\usepackage{xcolor}                                  % HTML-Notation of colors (Hex)
-\usepackage[obeyFinal, backgroundcolor=yellow, linecolor=black]{todonotes} % Add To-Do boxes to a page
-\usepackage{lipsum}                                  % Blindtext
-\usepackage{xstring}                                 % If-statements
+\usepackage{appendix}          % Appendix
+\usepackage{graphicx}          % Images
+\usepackage{enumitem}          % Lists
+\usepackage{listings}          % Display code
+\usepackage[section]{placeins} % That images are not moved
+\usepackage{float}             %            ''
+\usepackage{tabularx}          % Better tables
+\usepackage{longtable}         %      ''
+\usepackage[printonlyused]{acronym}        % Abbreviations; option footnote: display long version in footnote
+\usepackage{xcolor}                        % HTML-Notation of colors (Hex)
+\usepackage{lipsum}                        % Blindtext
+\usepackage{xstring}                       % If-statements
 
-%\usepackage{lmodern}                                 % Other font
+%\usepackage{lmodern}                       % Better font
+
+\setlength {\marginparwidth }{2cm} % Fix styling issue
+\usepackage[obeyFinal, backgroundcolor=yellow, linecolor=black]{todonotes} % Add To-Do boxes to a page
 
 \newcommand{\iflang}[2]{%
     \IfStrEq{\lang}{#1}{#2}{}
@@ -57,7 +59,7 @@
     bookmarksnumbered=true % TOC in PDF
 }
 
-\usepackage[nonumberlist, toc]{glossaries}           % Glossary
+\usepackage[nonumberlist, toc]{glossaries} % Glossary
 
 \usepackage{bookmark}      % Workaround to avoid bugs in Hyperref
 
