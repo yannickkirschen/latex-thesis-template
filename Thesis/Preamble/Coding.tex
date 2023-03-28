@@ -22,38 +22,66 @@
     frame=none,                 % Border off
 }
 
-\definecolor{JavaKeyword}{HTML}{0033B3}
-\definecolor{JavaString}{HTML}{067D17}
-\definecolor{JavaAnnotation}{HTML}{9E880D}
-\definecolor{JavaComment}{HTML}{8C8C8C}
+\definecolor{Keyword}{HTML}{0033B3}
+\definecolor{String}{HTML}{067D17}
+\definecolor{Annotation}{HTML}{9E880D}
+\definecolor{Comment}{HTML}{8C8C8C}
 
-\definecolor{XMLKeyword}{HTML}{0033B3}
-\definecolor{XMLString}{HTML}{067D17}
-\definecolor{XMLComment}{HTML}{8C8C8C}
-
-\definecolor{JSONString}{HTML}{067D17}
 \definecolor{JSONNumber}{HTML}{1750EB}
 \definecolor{JSONDelimiter}{HTML}{000000}
 
-\definecolor{YAMLString}{HTML}{067D17}
-\definecolor{YAMLKeyword}{HTML}{0033B3}
-\definecolor{YAMLComment}{HTML}{8C8C8C}
-
-\definecolor{PropertiesKeyword}{HTML}{083080}
-\definecolor{PropertiesString}{HTML}{067D17}
-\definecolor{PropertiesComment}{HTML}{8C8C8C}
-
 \lstdefinelanguage{Java}{
-    commentstyle=\color{JavaComment},
+    commentstyle=\color{Comment},
     morestring=[b]",
-    stringstyle=\color{JavaString},
+    stringstyle=\color{String},
     morekeywords={abstract, assert, boolean, break, byte, case, catch, char, class, continue, default, do, double, else,
             enum, extends, final, finally, float, for, if, implements, import, instanceof, int, interface, long, native, new, package,
             private, protected, public, return, short, static, strictfp, super, super, switch, synchronized, this, throw, throws,
             transient, try, var, void, volatile, while},
-    keywordstyle=\color{JavaKeyword},
-    moredelim=[il][\textcolor{JavaAnnotation}]{$$},
-    moredelim=[is][\textcolor{JavaAnnotation}]{\%\%}{\%\%}
+    keywordstyle=\color{Keyword},
+    moredelim=[il][\textcolor{Annotation}]{$$},
+    moredelim=[is][\textcolor{Annotation}]{\%\%}{\%\%}
+}
+
+\lstdefinelanguage{Python}{
+    commentstyle=\color{Comment},
+    morestring=[b]',
+    morestring=[b]",
+    stringstyle=\color{String},
+    morekeywords={and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if,
+            import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield},
+    keywordstyle=\color{Keyword},
+    moredelim=[il][\textcolor{Annotation}]{$$},
+    moredelim=[is][\textcolor{Annotation}]{\%\%}{\%\%},
+    moredelim=[il][\textcolor{Comment}]{//},
+}
+
+\lstdefinelanguage{JavaScript}{
+    commentstyle=\color{Comment},
+    morestring=[b]',
+    morestring=[b]`,
+    stringstyle=\color{String},
+    morekeywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, false, finally, for,
+            function, if, import, in, instanceof, new, null, return, super, switch, this, throw, true, try, typeof, var, void, while, with},
+    keywordstyle=\color{Keyword}
+}
+
+\lstdefinelanguage{Go}{
+    commentstyle=\color{Comment},
+    morestring=[b]",
+    stringstyle=\color{String},
+    morekeywords={break, case, chan, const, continue, default, defer, else, fallthrough, for, func, go, goto, if, import, interface, map,
+            package, range, return, select, struct, switch, type, var},
+    keywordstyle=\color{Keyword}
+}
+
+\lstdefinelanguage{Rust}{
+    commentstyle=\color{Comment},
+    morestring=[b]",
+    stringstyle=\color{String},
+    morekeywords={as, async, await, break, const, continue, crate, dyn, else, enum, extern, false, fn, for, if, impl, in, let, loop, match,
+            mod, move, mut, pub, ref, return, Self, self, static, struct, super, trait, true, type, union, unsafe, use, where, while},
+    keywordstyle=\color{Keyword}
 }
 
 \lstdefinelanguage{XML}{
@@ -61,15 +89,14 @@
     morestring=[s]{>}{<},
     morecomment=[s]{<!--}{-->},
     morecomment=[s]{<?}{?>},
-    stringstyle=\color{XMLString},
-    identifierstyle=\color{XMLKeyword},
-    commentstyle=\color{XMLComment},
-    morekeywords={} % list your attributes here
+    stringstyle=\color{String},
+    identifierstyle=\color{Keyword},
+    commentstyle=\color{Comment}
 }
 
 \lstdefinelanguage{JSON}{
 morestring=[b]",
-stringstyle=\color{JSONString},
+stringstyle=\color{String},
 literate=
 *{0}{{{\color{JSONNumber}0}}}{1}
 {1}{{{\color{JSONNumber}1}}}{1}
@@ -89,21 +116,22 @@ literate=
 
 \lstdefinelanguage{YML}{
     morecomment=[l]{\#},
-    commentstyle=\color{YAMLComment},
+    commentstyle=\color{Comment},
     morestring=[b]",
     morestring=[b]',
-    stringstyle=\color{YAMLString},
-    morekeywords={}, % list your attributes here
-    keywordstyle=\color{YAMLKeyword},
+    stringstyle=\color{String},
+    morekeywords={ingress, domain, config, secret, env, data, name, value,
+            apiVersion, kind, metadata, spec, replicas, selector, matchLabels, template, labels, app, spec, containers, image, ports, containerPort, protocol
+        },
+    keywordstyle=\color{Keyword},
 }
 
 \lstdefinelanguage{properties}{
     alsoletter={-},
     morecomment=[l]{\#},
-    commentstyle=\color{PropertiesComment},
+    commentstyle=\color{Comment},
     morestring=[b]",
     morestring=[b]',
-    stringstyle=\color{PropertiesString},
-    morekeywords={}, % list your attributes here
-    keywordstyle=\color{PropertiesKeyword},
+    stringstyle=\color{String},
+    keywordstyle=\color{Keyword},
 }
