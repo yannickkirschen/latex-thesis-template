@@ -13,4 +13,4 @@ project there where they need to write a thesis for.
 
 ## Build
 
-Run `.vscode/build.sh` or `.vscode/build.ps1`. You can also use the file `.vscode/laun.json` on case you are using VS Code.
+Run `.vscode/build.sh` or `.vscode/build.ps1`. You can also use the file `.vscode/tasks.json` on case you are using VS Code.
